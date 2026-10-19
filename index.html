@@ -116,12 +116,8 @@
   .checks { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
   .checks li { display: flex; align-items: center; gap: 12px; font-size: 17px; color: var(--ink); }
   .checks li::before { content: "✓"; flex: none; width: 24px; height: 24px; border-radius: 50%; background: var(--accent); color: var(--accent-ink); display: grid; place-items: center; font-size: 13px; font-weight: 700; }
-  .hero-media { position: relative; display: grid; place-items: center; min-height: 380px; }
-  .hero-media::before {
-    content: ""; position: absolute; width: 88%; aspect-ratio: 1; border-radius: 50%;
-    background: var(--accent); top: 50%; left: 50%; transform: translate(-50%, -50%);
-  }
-  .hero-media img { position: relative; width: 82%; max-width: 440px; filter: drop-shadow(0 30px 40px rgba(0,0,0,.35)); }
+  .hero-media { position: relative; }
+  .hero-media img { width: 100%; aspect-ratio: 4 / 5; max-height: 560px; object-fit: cover; object-position: center 70%; border-radius: var(--r-lg); display: block; }
   .badge-float {
     position: absolute; z-index: 2; background: var(--white); color: var(--ink);
     border-radius: var(--r-md); padding: 12px 16px; box-shadow: 0 12px 30px rgba(0,0,0,.15);
@@ -281,16 +277,21 @@
   }
   @media (max-width: 760px) {
     .nav-phone { display: none; }
-    .hero { grid-template-columns: 1fr; padding: 28px 22px; border-radius: 28px; gap: 8px; }
-    .hero-sub { font-size: 17px; margin-bottom: 20px; }
-    .for-label { font-size: 18px; }
-    .checks li { font-size: 16px; }
-    .for { margin-bottom: 24px; }
+    header { padding: 8px 0; }
+    .hero { grid-template-columns: 1fr; padding: 18px 18px 20px; border-radius: 28px; gap: 0; }
+    .hero h1 { font-size: 29px; margin-bottom: 10px; }
+    .hero-sub { font-size: 16px; margin-bottom: 14px; line-height: 1.4; }
+    .for-label { font-size: 17px; margin-bottom: 8px; }
+    .checks { gap: 6px; }
+    .checks li { font-size: 15px; gap: 10px; }
+    .checks li::before { width: 22px; height: 22px; font-size: 12px; }
+    .for { margin-bottom: 16px; }
     .tag { font-size: 11px; padding: 7px 12px; letter-spacing: .04em; }
     .btn { font-size: 15px; padding-left: 20px; }
     .hero .btn { width: 100%; justify-content: space-between; }
-    .hero-media { min-height: 0; order: -1; margin-bottom: 14px; }
-    .hero-media img { width: 62%; }
+    .hero-media { order: -1; margin-bottom: 16px; }
+    /* высота фото подстраивается под экран: высокое на больших телефонах, ниже на маленьких */
+    .hero-media img { aspect-ratio: auto; height: clamp(150px, calc(100svh - 480px), 270px); border-radius: 20px; }
     .badge-float { padding: 9px 12px; font-size: 12px; }
     .badge-float b { font-size: 19px; }
     .stats { grid-template-columns: 1fr 1fr; }
@@ -356,7 +357,7 @@
       <a class="btn btn-dark" href="#form">Отримати умови співпраці <span class="arr">→</span></a>
     </div>
     <div class="hero-media">
-      <img src="images/mat-cutout.webp" alt="Комплект автокилимків Stingray" width="900" height="999" fetchpriority="high">
+      <img src="images/hero-photo.webp" alt="Автокилимок Stingray в салоні авто" width="1080" height="1080" fetchpriority="high">
     </div>
   </section>
 
