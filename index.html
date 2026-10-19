@@ -1,0 +1,585 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Stingray — автокилимки оптом для бізнесу</title>
+<meta name="description" content="Автокилимки Stingray оптом для магазинів, СТО, автосалонів і дропшиперів. 800+ моделей, оптова знижка до 30%, відвантаження в день замовлення.">
+
+<!-- ===== НАСТРОЙКИ (заполнить перед запуском) ===== -->
+<script>
+  window.LANDING_CONFIG = {
+    // Ссылка на Google Apps Script (шаг 3 в инструкции). Пока пусто — форма работает в тестовом режиме.
+    FORM_ENDPOINT: "",
+    // ID пикселя Meta (Events Manager → Источники данных). Пока пусто — пиксель не грузится.
+    META_PIXEL_ID: ""
+  };
+</script>
+
+<!-- Meta Pixel -->
+<script>
+  (function () {
+    var id = window.LANDING_CONFIG.META_PIXEL_ID;
+    if (!id) return;
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', id);
+    fbq('track', 'PageView');
+  })();
+</script>
+
+<style>
+  :root {
+    --page: #1c1c1c;
+    --dark: #2a2a2a;
+    --dark-2: #333333;
+    --line: rgba(255,255,255,.1);
+    --light: #f3f5f5;
+    --white: #ffffff;
+    --ink: #151515;
+    --ink-muted: #5c6366;
+    --text: #ffffff;
+    --muted: #b3b3b3;
+    --accent: #0ef0fe;
+    --accent-ink: #052528;
+    --r-xl: 36px;
+    --r-lg: 26px;
+    --r-md: 18px;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0; background: var(--page); color: var(--text);
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 16px; line-height: 1.5; -webkit-font-smoothing: antialiased;
+  }
+  img { max-width: 100%; height: auto; display: block; }
+  a { color: inherit; }
+  .wrap { max-width: 1200px; margin: 0 auto; padding: 0 16px; }
+  .block { margin-top: 16px; }
+  section { scroll-margin-top: 90px; }
+  h1, h2, h3 { margin: 0; line-height: 1.08; letter-spacing: -0.02em; font-weight: 700; }
+  h2 { font-size: clamp(28px, 4vw, 48px); }
+  .mark { background: var(--accent); color: var(--accent-ink); padding: 0 .18em; border-radius: .22em; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+  .hl { color: var(--accent); }
+  .tag {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: 13px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase;
+    padding: 8px 14px; border-radius: 999px; border: 1px solid currentColor; opacity: .85; margin-bottom: 18px;
+  }
+  .tag::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+  .on-light .tag { color: var(--ink); }
+
+  /* Buttons: pill + round arrow */
+  .btn {
+    display: inline-flex; align-items: center; gap: 14px;
+    background: var(--accent); color: var(--accent-ink);
+    font: 700 16px/1 Arial, sans-serif; text-decoration: none;
+    padding: 8px 8px 8px 26px; border-radius: 999px; border: 0; cursor: pointer;
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn .arr {
+    width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center;
+    background: var(--ink); color: var(--accent); font-size: 20px; flex: none;
+  }
+  .btn:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(14,240,254,.35); }
+  .btn-dark { background: var(--ink); color: var(--white); }
+  .btn-dark .arr { background: var(--accent); color: var(--accent-ink); }
+
+  /* ---------- Header (floating pill) ---------- */
+  header { position: sticky; top: 0; z-index: 30; padding: 12px 0; }
+  .nav {
+    display: flex; align-items: center; justify-content: space-between; gap: 12px;
+    background: rgba(21,21,21,.86); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--line); border-radius: 999px; padding: 8px 8px 8px 22px;
+  }
+  .nav .logo img { height: 30px; width: auto; }
+  .nav-right { display: flex; align-items: center; gap: 18px; }
+  .nav-phone { text-decoration: none; font-weight: 700; font-size: 15px; }
+  .nav .btn { padding: 6px 6px 6px 18px; font-size: 14px; gap: 10px; }
+  .nav .btn .arr { width: 34px; height: 34px; font-size: 16px; }
+
+  /* ---------- Hero (white card) ---------- */
+  .hero {
+    background: var(--white); color: var(--ink); border-radius: var(--r-xl);
+    display: grid; grid-template-columns: 1.1fr .9fr; align-items: center; gap: 24px;
+    padding: 56px; overflow: hidden; position: relative;
+  }
+  .hero h1 { font-size: clamp(32px, 4.6vw, 58px); margin-bottom: 22px; }
+  .hero-sub { color: var(--ink-muted); font-size: 20px; margin: 0 0 26px; max-width: 520px; }
+  .for { margin-bottom: 30px; }
+  .for-label { display: block; font-size: 20px; font-weight: 700; color: var(--ink); margin-bottom: 12px; letter-spacing: -0.01em; }
+  .checks { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+  .checks li { display: flex; align-items: center; gap: 12px; font-size: 17px; color: var(--ink); }
+  .checks li::before { content: "✓"; flex: none; width: 24px; height: 24px; border-radius: 50%; background: var(--accent); color: var(--accent-ink); display: grid; place-items: center; font-size: 13px; font-weight: 700; }
+  .hero-media { position: relative; display: grid; place-items: center; min-height: 380px; }
+  .hero-media::before {
+    content: ""; position: absolute; width: 88%; aspect-ratio: 1; border-radius: 50%;
+    background: var(--accent); top: 50%; left: 50%; transform: translate(-50%, -50%);
+  }
+  .hero-media img { position: relative; width: 82%; max-width: 440px; filter: drop-shadow(0 30px 40px rgba(0,0,0,.35)); }
+  .badge-float {
+    position: absolute; z-index: 2; background: var(--white); color: var(--ink);
+    border-radius: var(--r-md); padding: 12px 16px; box-shadow: 0 12px 30px rgba(0,0,0,.15);
+    font-size: 13px; line-height: 1.25;
+  }
+  .badge-float b { display: block; font-size: 24px; }
+  .badge-1 { left: 0; bottom: 12%; }
+  .badge-2 { right: 0; top: 10%; }
+
+  /* ---------- Stats pill ---------- */
+  .stats {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    background: var(--dark); border: 1px solid var(--line); border-radius: var(--r-lg);
+  }
+  .stat { padding: 26px 22px; text-align: center; position: relative; }
+  .stat + .stat::before { content: ""; position: absolute; left: 0; top: 24%; height: 52%; width: 1px; background: var(--line); }
+  .stat b { display: block; font-size: clamp(26px, 3.4vw, 40px); line-height: 1; margin-bottom: 8px; }
+  .stat span { color: var(--muted); font-size: 14px; }
+
+  /* ---------- Section shells ---------- */
+  .panel { border-radius: var(--r-xl); padding: 56px; }
+  .panel-dark { background: var(--dark); }
+  .panel-light { background: var(--light); color: var(--ink); }
+  .panel-accent { background: var(--accent); color: var(--accent-ink); }
+  .head { display: flex; justify-content: space-between; align-items: end; gap: 24px; margin-bottom: 34px; flex-wrap: wrap; }
+  .head p { margin: 0; max-width: 420px; color: var(--muted); }
+  .on-light .head p { color: var(--ink-muted); }
+
+  /* ---------- Who (dark cards) ---------- */
+  .who-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+  .who {
+    background: var(--dark-2); border-radius: var(--r-lg); padding: 26px 22px 24px;
+    display: flex; flex-direction: column; gap: 12px; min-height: 230px;
+  }
+  .who .ico { width: 48px; height: 48px; border-radius: 14px; background: var(--accent); color: var(--accent-ink); display: grid; place-items: center; font-size: 22px; }
+  .who h3 { font-size: 19px; margin-top: 6px; }
+  .who p { margin: 0; color: var(--muted); font-size: 15px; }
+
+  /* ---------- Bento (quality + supplier) ---------- */
+  .bento { display: grid; grid-template-columns: repeat(12, 1fr); gap: 16px; }
+  .tile { border-radius: var(--r-xl); padding: 40px; overflow: hidden; position: relative; }
+  .t-photo { grid-column: span 5; padding: 0; min-height: 520px; }
+  .t-photo img { width: 100%; height: 100%; object-fit: cover; position: absolute; inset: 0; }
+  .t-photo .cap {
+    position: absolute; left: 18px; right: 18px; bottom: 18px; z-index: 1;
+    background: rgba(21,21,21,.75); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+    border-radius: var(--r-md); padding: 16px 18px; font-weight: 700;
+  }
+  .t-quality { grid-column: span 7; background: var(--white); color: var(--ink); }
+  .t-supplier { grid-column: span 7; background: var(--dark); }
+  .t-big { grid-column: span 5; background: var(--accent); color: var(--accent-ink); display: flex; flex-direction: column; justify-content: space-between; gap: 30px; }
+  .t-big .num { font-size: clamp(64px, 9vw, 120px); font-weight: 700; line-height: .9; letter-spacing: -0.04em; }
+  .t-big p { margin: 0; font-size: 18px; font-weight: 700; }
+  .tile h3 { font-size: clamp(24px, 2.6vw, 32px); margin-bottom: 24px; }
+  .list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .list li { border-radius: var(--r-md); padding: 16px; font-weight: 700; font-size: 16px; display: grid; grid-template-columns: 26px 1fr; column-gap: 12px; align-items: start; }
+  .list li span { display: block; font-weight: 400; font-size: 14px; margin-top: 4px; }
+  .t-quality .list li { background: var(--light); }
+  .t-quality .list li span { color: var(--ink-muted); }
+  .t-supplier .list li { background: var(--dark-2); }
+  .t-supplier .list li span { color: var(--muted); }
+  .list li::before { content: "✓"; display: grid; place-items: center; width: 26px; height: 26px; border-radius: 50%; background: var(--accent); color: var(--accent-ink); font-size: 14px; grid-row: span 2; }
+
+  /* ---------- Assortment (light panel) ---------- */
+  .range { display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px; }
+  .range img { width: 100%; aspect-ratio: 1; object-fit: contain; background: var(--dark); border-radius: var(--r-md); padding: 12px; }
+  .fit { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 12px; margin-top: 12px; }
+  .fit img { width: 100%; height: 100%; aspect-ratio: 1; object-fit: cover; border-radius: var(--r-md); }
+  .fit img:first-child { aspect-ratio: auto; }
+
+  /* ---------- Terms (numbered pills + photo) ---------- */
+  .terms { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+  .pills { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; counter-reset: p; }
+  .pills li {
+    counter-increment: p; display: flex; align-items: center; gap: 16px;
+    background: var(--dark-2); border-radius: 999px; padding: 8px 22px 8px 8px; font-weight: 700;
+  }
+  .pills li::before {
+    content: counter(p); flex: none; width: 40px; height: 40px; border-radius: 50%;
+    background: var(--accent); color: var(--accent-ink); display: grid; place-items: center; font-size: 15px;
+  }
+  .terms-photo { border-radius: var(--r-xl); overflow: hidden; aspect-ratio: 4 / 3; }
+  .terms-photo img { width: 100%; height: 100%; object-fit: cover; }
+
+
+  /* ---------- Perks (по странице «Співпраця») ---------- */
+  .perks-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+  .perk { background: var(--white); border-radius: var(--r-lg); padding: 26px 22px; }
+  .perk-n { display: inline-grid; place-items: center; width: 44px; height: 44px; border-radius: 50%; background: var(--accent); color: var(--accent-ink); font-weight: 700; margin-bottom: 18px; }
+  .perk h3 { font-size: 19px; margin-bottom: 14px; }
+  .perk ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+  .perk li { position: relative; padding-left: 18px; color: var(--ink-muted); font-size: 15px; }
+  .perk li::before { content: ""; position: absolute; left: 0; top: .55em; width: 7px; height: 7px; border-radius: 50%; background: var(--ink); }
+
+  /* ---------- Swipe rows (assortment) ---------- */
+  .range-panel { overflow: hidden; }
+  .swipe { display: flex; gap: 14px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; margin: 0 -56px; padding: 0 56px; scroll-padding: 0 56px; }
+  .swipe::-webkit-scrollbar { display: none; }
+  .swipe img { flex: none; scroll-snap-align: start; }
+  .sets img { width: 220px; height: 210px; object-fit: contain; }
+  .gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 18px; }
+  .gallery img { width: 100%; aspect-ratio: 414 / 522; object-fit: cover; border-radius: var(--r-lg); }
+  .swipe-hint { display: none; color: var(--muted); font-size: 14px; margin: 14px 0 0; }
+
+  /* ---------- Steps ---------- */
+  .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  .step { background: var(--dark-2); border-radius: var(--r-lg); padding: 28px 26px; }
+  .step .n { display: inline-grid; place-items: center; width: 52px; height: 52px; border-radius: 50%; background: var(--accent); color: var(--accent-ink); font-weight: 700; font-size: 18px; margin-bottom: 22px; }
+  .step h3 { font-size: 20px; margin-bottom: 8px; }
+  .step p { margin: 0; color: var(--muted); }
+
+  /* ---------- Form (accent panel) ---------- */
+  .lead { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+  .lead h2 { margin-bottom: 16px; }
+  .lead-text { font-size: 18px; margin: 0 0 26px; max-width: 440px; }
+  .lead-phones { display: grid; gap: 6px; }
+  .lead-phones a { font-weight: 700; font-size: 20px; text-decoration: none; }
+  .form-box { background: var(--white); color: var(--ink); border-radius: var(--r-lg); padding: 30px; box-shadow: 0 20px 50px rgba(0,0,0,.18); }
+  .row-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .field { margin-bottom: 14px; }
+  .field label { display: block; font-weight: 700; font-size: 14px; margin-bottom: 6px; }
+  .field input {
+    width: 100%; font: inherit; color: var(--ink); background: var(--light);
+    border: 1.5px solid transparent; border-radius: 14px; padding: 15px 16px; outline: none;
+  }
+  .field input:focus { border-color: var(--ink); background: var(--white); }
+  .err { color: #d63b3b; font-size: 13px; margin: 6px 0 0; display: none; }
+  .field.invalid .err { display: block; }
+  .field.invalid input { border-color: #d63b3b; }
+  .form-box .btn { width: 100%; justify-content: space-between; margin-top: 6px; }
+  .btn[disabled] { opacity: .6; cursor: wait; }
+  .form-note { font-size: 13px; color: var(--ink-muted); margin: 12px 0 0; text-align: center; }
+  .thanks { display: none; text-align: center; padding: 30px 0; }
+  .thanks .ok { width: 64px; height: 64px; border-radius: 50%; background: var(--accent); color: var(--accent-ink); display: grid; place-items: center; font-size: 30px; margin: 0 auto 16px; }
+  .thanks h3 { font-size: 24px; margin-bottom: 8px; }
+  .thanks p { margin: 0; color: var(--ink-muted); }
+  .form-box.done form { display: none; }
+  .form-box.done .thanks { display: block; }
+
+  /* ---------- Footer ---------- */
+  footer { margin-top: 16px; padding: 40px 0 120px; color: var(--muted); font-size: 15px; }
+  .foot { display: grid; grid-template-columns: auto 2fr 1fr; gap: 40px; align-items: start; border-top: 1px solid var(--line); padding-top: 36px; }
+  .foot img { height: 30px; width: auto; }
+  .foot h3 { color: var(--text); font-size: 14px; letter-spacing: .04em; margin-bottom: 10px; }
+  .foot p { margin: 0 0 6px; }
+  .foot a { text-decoration: none; }
+
+  /* ---------- Sticky CTA (mobile) ---------- */
+  .sticky { position: fixed; left: 12px; right: 12px; bottom: 12px; z-index: 25; display: none; }
+  .sticky .btn { width: 100%; justify-content: space-between; box-shadow: 0 10px 30px rgba(0,0,0,.4); }
+
+  @media (max-width: 1000px) {
+    .who-grid { grid-template-columns: repeat(2, 1fr); }
+    .t-photo { grid-column: span 12; min-height: 420px; }
+    .t-quality, .t-supplier, .t-big { grid-column: span 12; }
+    .perks-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 760px) {
+    .nav-phone { display: none; }
+    .hero { grid-template-columns: 1fr; padding: 28px 22px; border-radius: 28px; gap: 8px; }
+    .hero-sub { font-size: 17px; margin-bottom: 20px; }
+    .for-label { font-size: 18px; }
+    .checks li { font-size: 16px; }
+    .for { margin-bottom: 24px; }
+    .tag { font-size: 11px; padding: 7px 12px; letter-spacing: .04em; }
+    .btn { font-size: 15px; padding-left: 20px; }
+    .hero .btn { width: 100%; justify-content: space-between; }
+    .hero-media { min-height: 0; order: -1; margin-bottom: 14px; }
+    .hero-media img { width: 62%; }
+    .badge-float { padding: 9px 12px; font-size: 12px; }
+    .badge-float b { font-size: 19px; }
+    .stats { grid-template-columns: 1fr 1fr; }
+    .stat:nth-child(3)::before { display: none; }
+    .stat:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
+    .panel { padding: 32px 18px; border-radius: 28px; }
+    .head { margin-bottom: 24px; }
+    .who-grid { grid-template-columns: 1fr; }
+    .who { min-height: 0; display: grid; grid-template-columns: 44px 1fr; column-gap: 14px; row-gap: 4px; padding: 20px 18px; }
+    .who .ico { grid-row: span 2; width: 44px; height: 44px; font-size: 20px; }
+    .who h3 { margin: 0; font-size: 17px; }
+    .tile { padding: 28px 20px; border-radius: 28px; }
+    .t-photo { min-height: 380px; padding: 0; }
+    .list { grid-template-columns: 1fr; }
+    .perks-grid { grid-template-columns: 1fr; gap: 10px; }
+    .perk { padding: 20px 18px; display: grid; grid-template-columns: 40px 1fr; column-gap: 14px; align-items: center; }
+    .perk-n { width: 40px; height: 40px; margin: 0; font-size: 14px; }
+    .perk h3 { margin: 0; font-size: 18px; }
+    .perk ul { grid-column: 1 / -1; margin-top: 14px; }
+    .swipe { margin: 0 -18px; padding: 0 18px; gap: 10px; scroll-padding: 0 18px; }
+    .sets img { width: 150px; height: 145px; }
+    .gallery { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; margin: 14px -18px 0; padding: 0 18px; gap: 10px; scroll-padding: 0 18px; }
+    .gallery::-webkit-scrollbar { display: none; }
+    .gallery img { flex: none; width: 72%; scroll-snap-align: start; }
+    .swipe-hint { display: block; }
+    .terms, .lead { grid-template-columns: 1fr; gap: 24px; }
+    .steps { grid-template-columns: 1fr; gap: 10px; }
+    .step { display: grid; grid-template-columns: 44px 1fr; column-gap: 14px; padding: 18px; }
+    .step .n { grid-row: span 2; width: 44px; height: 44px; margin: 0; font-size: 15px; }
+    .step h3 { font-size: 17px; margin: 2px 0 2px; }
+    .row-2 { grid-template-columns: 1fr; gap: 0; }
+    .form-box { padding: 22px 18px; }
+    .foot { grid-template-columns: 1fr; gap: 22px; }
+    .sticky.show { display: block; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <nav class="nav">
+      <a class="logo" href="#"><img src="images/logo.png" alt="Stingray" width="500" height="157"></a>
+      <div class="nav-right">
+        <a class="nav-phone" href="tel:+380978202719">+38 (097) 820-27-19</a>
+        <a class="btn" href="#form">Умови співпраці <span class="arr">→</span></a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- 1. Первый экран -->
+  <section class="hero on-light">
+    <div>
+      <h1>Автокилимки Stingray для <span class="mark">вашого бізнесу</span></h1>
+      <p class="hero-sub">Опт і дропшипінг від офіційного дистриб'ютора</p>
+      <div class="for">
+        <span class="for-label">Спеціальні умови для:</span>
+        <ul class="checks"><li>Автосалонів</li><li>Автомагазинів</li><li>СТО та сервісних центрів</li><li>Корпоративних клієнтів</li></ul>
+      </div>
+      <a class="btn btn-dark" href="#form">Отримати умови співпраці <span class="arr">→</span></a>
+    </div>
+    <div class="hero-media">
+      <img src="images/mat-cutout.webp" alt="Комплект автокилимків Stingray" width="900" height="999" fetchpriority="high">
+    </div>
+  </section>
+
+  <!-- Цифры: единственное место с ключевыми цифрами -->
+  <section class="stats block">
+    <div class="stat"><b class="hl">800+</b><span>моделей авто</span></div>
+    <div class="stat"><b class="hl">до 30%</b><span>оптова знижка</span></div>
+    <div class="stat"><b class="hl">1 день</b><span>відвантаження в день замовлення</span></div>
+    <div class="stat"><b class="hl">3</b><span>склади в Україні</span></div>
+  </section>
+
+  <!-- 2. Для кого -->
+  <section class="panel panel-dark block">
+    <div class="head">
+      <div><span class="tag">Партнерам</span><h2>Кому <span class="mark">вигідно</span> працювати з нами</h2></div>
+    </div>
+    <div class="who-grid">
+      <div class="who"><div class="ico"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10v10h16V10"/><path d="M3 10l1.5-6h15L21 10z"/><path d="M10 20v-5h4v5"/></svg></div><h3>Автомагазини та інтернет-магазини</h3><p>Розширте асортимент товаром, який купують під кожне авто.</p></div>
+      <div class="who"><div class="ico"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 8l-9-5-9 5 9 5 9-5z"/><path d="M3 8v8l9 5 9-5V8"/><path d="M12 13v8"/></svg></div><h3>Дропшипери</h3><p>Продаєте без власного складу — ми відвантажуємо замовлення вашим клієнтам.</p></div>
+      <div class="who"><div class="ico"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.6 2.6-2.4-.6-.6-2.4z"/></svg></div><h3>СТО та детейлінг</h3><p>Пропонуйте клієнтам килимки під їхнє авто прямо під час обслуговування.</p></div>
+      <div class="who"><div class="ico"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 16v-3.5L5.2 7.6A2 2 0 0 1 7 6.5h10a2 2 0 0 1 1.8 1.1L21 12.5V16"/><path d="M3 12.5h18"/><path d="M3 16h18"/><circle cx="7" cy="16.5" r="1.8"/><circle cx="17" cy="16.5" r="1.8"/></svg></div><h3>Автосалони</h3><p>Килимки для комплектації авто від офіційного дистриб'ютора.</p></div>
+    </div>
+  </section>
+
+  <!-- 3. Выгоды — по странице «Співпраця» -->
+  <section class="panel panel-light on-light block">
+    <div class="head">
+      <div><span class="tag">Переваги</span><h2>Ваші вигоди <span class="mark">від співпраці</span></h2></div>
+    </div>
+    <div class="perks-grid">
+      <div class="perk">
+        <div class="perk-n">01</div>
+        <h3>Гарантована оригінальність</h3>
+        <ul><li>Усі вироби мають сертифікати</li><li>Супровідні документи від виробника</li><li>Доступ до новинок лінійки першими</li></ul>
+      </div>
+      <div class="perk">
+        <div class="perk-n">02</div>
+        <h3>Гнучкі умови</h3>
+        <ul><li>Оптові знижки до 30%</li><li>Система постійних знижок для регулярних замовлень</li><li>Індивідуальні графіки оплати</li></ul>
+      </div>
+      <div class="perk">
+        <div class="perk-n">03</div>
+        <h3>Логістичні переваги</h3>
+        <ul><li>Склади в 3 містах України</li><li>Можливість дропшипінгу</li><li>Відвантаження в день замовлення</li></ul>
+      </div>
+      <div class="perk">
+        <div class="perk-n">04</div>
+        <h3>Маркетингова підтримка</h3>
+        <ul><li>Професійні фото- та відеоматеріали</li><li>Вивантаження товарів для маркетплейсів і CMS-платформ</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Ассортимент: без рамок, свайп-ленты -->
+  <section class="panel panel-dark block range-panel">
+    <div class="head">
+      <div><span class="tag">Асортимент</span><h2>Килимки <span class="mark">під будь-яке</span> авто</h2></div>
+      <p>Від легкових авто до комерційного транспорту.</p>
+    </div>
+    <div class="swipe sets">
+      <img src="images/set-1.webp" alt="Комплект автокилимків Stingray" loading="lazy">
+      <img src="images/set-2.webp" alt="Комплект автокилимків Stingray" loading="lazy">
+      <img src="images/set-3.webp" alt="Комплект автокилимків Stingray" loading="lazy">
+      <img src="images/set-4.webp" alt="Комплект автокилимків Stingray" loading="lazy">
+      <img src="images/set-5.webp" alt="Комплект автокилимків Stingray" loading="lazy">
+      <img src="images/set-6.webp" alt="Комплект автокилимків Stingray" loading="lazy">
+    </div>
+    <div class="gallery">
+      <img src="images/gal-1.webp" alt="Килимок Stingray в салоні авто" loading="lazy" width="414" height="522">
+      <img src="images/gal-2.webp" alt="Килимок Stingray з логотипом" loading="lazy" width="415" height="522">
+      <img src="images/gal-3.webp" alt="Фактура килимка Stingray" loading="lazy" width="414" height="522">
+    </div>
+    <p class="swipe-hint">Гортайте →</p>
+  </section>
+
+  <!-- 5. Как начать -->
+  <section class="panel panel-dark block">
+    <div class="head">
+      <div><span class="tag">Старт</span><h2>Як почати <span class="mark">співпрацю</span></h2></div>
+    </div>
+    <div class="steps">
+      <div class="step"><div class="n">01</div><h3>Залиште заявку</h3><p>Це займе хвилину</p></div>
+      <div class="step"><div class="n">02</div><h3>Обговоримо умови</h3><p>Менеджер зателефонує, розповість умови і надішле прайс</p></div>
+      <div class="step"><div class="n">03</div><h3>Перше замовлення</h3><p>Відвантажуємо в день замовлення</p></div>
+    </div>
+  </section>
+
+  <!-- 8. Форма -->
+  <section class="panel panel-accent block" id="form">
+    <div class="lead">
+      <div>
+        <h2>Отримайте умови співпраці</h2>
+        <p class="lead-text">Залиште контакти — менеджер зателефонує, розповість умови і надішле прайс.</p>
+        <div class="lead-phones">
+          <a href="tel:+380978202719">+38 (097) 820-27-19</a>
+          <a href="tel:+380992172028">+38 (099) 217-20-28</a>
+        </div>
+      </div>
+
+      <div class="form-box" id="formBox">
+        <form id="leadForm" novalidate>
+          <div class="row-2">
+            <div class="field" data-req>
+              <label for="f-name">Ім'я</label>
+              <input id="f-name" name="name" type="text" autocomplete="given-name">
+              <p class="err">Вкажіть ім'я</p>
+            </div>
+            <div class="field" data-req>
+              <label for="f-surname">Прізвище</label>
+              <input id="f-surname" name="surname" type="text" autocomplete="family-name">
+              <p class="err">Вкажіть прізвище</p>
+            </div>
+          </div>
+          <div class="field" data-req data-phone>
+            <label for="f-phone">Телефон</label>
+            <input id="f-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="+380">
+            <p class="err">Вкажіть номер телефону</p>
+          </div>
+          <button class="btn btn-dark" type="submit" id="submitBtn"><span class="lbl">Отримати умови</span> <span class="arr">→</span></button>
+          <p class="err" id="sendErr" style="text-align:center">Не вдалося надіслати. Спробуйте ще раз або зателефонуйте нам.</p>
+          <p class="form-note">Тільки для бізнес-клієнтів</p>
+        </form>
+        <div class="thanks">
+          <div class="ok">✓</div>
+          <h3>Дякуємо! Заявку отримано</h3>
+          <p>Менеджер зателефонує вам найближчим часом.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <img src="images/logo.png" alt="Stingray" width="500" height="157" loading="lazy">
+    <div>
+      <h3>Представництва</h3>
+      <p>Вінниця · Дніпро · Запоріжжя · Київ · Кривий Ріг · Львів · Миколаїв · Одеса · Полтава · Суми · Харків · Черкаси · Чернігів</p>
+    </div>
+    <div>
+      <h3>Контакти</h3>
+      <p><a href="tel:+380978202719">+38 (097) 820-27-19</a></p>
+      <p><a href="tel:+380992172028">+38 (099) 217-20-28</a></p>
+    </div>
+  </div>
+</footer>
+
+<div class="sticky" id="sticky"><a class="btn" href="#form">Отримати умови співпраці <span class="arr">→</span></a></div>
+
+<script>
+(function () {
+  var cfg = window.LANDING_CONFIG;
+  var form = document.getElementById('leadForm');
+  var box = document.getElementById('formBox');
+  var btn = document.getElementById('submitBtn');
+  var lbl = btn.querySelector('.lbl');
+  var sendErr = document.getElementById('sendErr');
+
+  // UTM-метки из рекламы — чтобы в таблице было видно, с какой кампании заявка
+  var params = new URLSearchParams(location.search);
+  var utm = {};
+  ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'].forEach(function (k) {
+    utm[k] = params.get(k) || '';
+  });
+
+  function validate() {
+    var ok = true;
+    form.querySelectorAll('[data-req]').forEach(function (f) {
+      var v = f.querySelector('input').value.trim();
+      var valid = f.hasAttribute('data-phone') ? v.replace(/\D/g, '').length >= 10 : v.length > 1;
+      f.classList.toggle('invalid', !valid);
+      if (!valid) ok = false;
+    });
+    return ok;
+  }
+
+  form.addEventListener('input', function (e) {
+    var f = e.target.closest('.field');
+    if (f && f.classList.contains('invalid')) validate();
+  });
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    sendErr.style.display = 'none';
+    if (!validate()) {
+      var first = form.querySelector('.invalid input');
+      if (first) first.focus();
+      return;
+    }
+    var data = new URLSearchParams(new FormData(form));
+    Object.keys(utm).forEach(function (k) { data.append(k, utm[k]); });
+    data.append('page', location.href);
+
+    btn.disabled = true;
+    lbl.textContent = 'Надсилаємо…';
+
+    var send = cfg.FORM_ENDPOINT
+      ? fetch(cfg.FORM_ENDPOINT, { method: 'POST', mode: 'no-cors', body: data })
+      : new Promise(function (r) { console.log('[TEST] заявка:', Object.fromEntries(data)); setTimeout(r, 500); });
+
+    send.then(function () {
+      if (window.fbq) fbq('track', 'Lead');
+      box.classList.add('done');
+    }).catch(function () {
+      sendErr.style.display = 'block';
+      btn.disabled = false;
+      lbl.textContent = 'Отримати умови';
+    });
+  });
+
+  // Липкая кнопка на телефоне: после первого экрана, прячем у формы
+  var sticky = document.getElementById('sticky');
+  var hero = document.querySelector('.hero');
+  var lead = document.getElementById('form');
+  function onScroll() {
+    var pastHero = window.scrollY > hero.offsetTop + hero.offsetHeight;
+    var nearForm = window.scrollY + window.innerHeight > lead.offsetTop + 100;
+    sticky.classList.toggle('show', pastHero && !nearForm);
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+})();
+</script>
+</body>
+</html>
