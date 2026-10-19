@@ -99,7 +99,8 @@
   }
   .nav .logo img { height: 30px; width: auto; }
   .nav-right { display: flex; align-items: center; gap: 18px; }
-  .nav-phone { text-decoration: none; font-weight: 700; font-size: 15px; }
+  .nav-phone { text-decoration: none; font-weight: 700; font-size: 15px; display: inline-flex; align-items: center; gap: 8px; }
+  .nav-phone svg { color: var(--accent); }
   .nav .btn { padding: 6px 6px 6px 18px; font-size: 14px; gap: 10px; }
   .nav .btn .arr { width: 34px; height: 34px; font-size: 16px; }
 
@@ -276,7 +277,10 @@
     .perks-grid { grid-template-columns: repeat(2, 1fr); }
   }
   @media (max-width: 760px) {
-    .nav-phone { display: none; }
+    .nav .btn { display: none; }
+    .nav { padding: 6px 6px 6px 18px; }
+    .nav-phone { background: var(--accent); color: var(--accent-ink); padding: 10px 14px; border-radius: 999px; font-size: 14px; }
+    .nav-phone svg { color: var(--accent-ink); }
     header { padding: 8px 0; }
     .hero { grid-template-columns: 1fr; padding: 18px 18px 20px; border-radius: 28px; gap: 0; }
     .hero h1 { font-size: 29px; margin-bottom: 10px; }
@@ -336,7 +340,7 @@
     <nav class="nav">
       <a class="logo" href="#"><img src="images/logo.png" alt="Stingray" width="500" height="157"></a>
       <div class="nav-right">
-        <a class="nav-phone" href="tel:+380978202719">+38 (097) 820-27-19</a>
+        <a class="nav-phone" href="tel:+380978202719"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>+38 (097) 820-27-19</a>
         <a class="btn" href="#form">Умови співпраці <span class="arr">→</span></a>
       </div>
     </nav>
